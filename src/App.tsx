@@ -1,10 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { Button } from './components/Button';
-import { MovieCard } from './components/MovieCard';
-
 import { SideBar } from './components/SideBar';
-// import { Content } from './components/Content';
+import { Content } from './components/Content';
 
 import { api } from './services/api';
 
@@ -64,8 +61,8 @@ export function App() {
 
       <SideBar genres={genres} buttonclick={handleClickButton} selectedGenreId={selectedGenreId}></SideBar>
       
-
-      <div className="container">
+      <Content movies={movies} selectedGenre={selectedGenre.name}></Content>
+      {/* <div className="container">
         <header>
           <span className="category">Categoria:<span> {selectedGenre.title}</span></span>
         </header>
@@ -77,7 +74,7 @@ export function App() {
             ))}
           </div>
         </main>
-      </div>
+      </div> */}
     </div>
   )
 }
